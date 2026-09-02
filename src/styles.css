@@ -6,21 +6,21 @@
 
 /*
  * Vanimaa Co. design system.
- * Deep luxury navy surfaces with metallic gold accents.
- * The whole brand experience is dark, so :root carries the navy palette.
+ * Editorial agency aesthetic: deep navy canvas, metallic gold accents,
+ * hairline rules, tight display typography, restrained motion.
  */
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 10px;
+  --radius-2xl: 14px;
+  --radius-3xl: 18px;
 
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -52,79 +52,80 @@
   --color-gold-light: var(--gold-light);
   --color-gold-soft: var(--gold-soft);
   --color-cream: var(--cream);
+  --color-hairline: var(--hairline);
 
-  --shadow-gold: 0 12px 40px -12px color-mix(in oklab, var(--gold) 45%, transparent);
-  --shadow-card: 0 24px 60px -24px oklch(0.05 0.02 265 / 80%);
+  --shadow-gold: 0 14px 44px -18px color-mix(in oklab, var(--gold) 55%, transparent);
+  --shadow-card: 0 26px 60px -34px oklch(0.04 0.02 265 / 90%);
 
-  --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-  --animate-float: float 7s ease-in-out infinite;
-  --animate-shimmer: shimmer 3.2s linear infinite;
+  --animate-float-slow: float-slow 9s ease-in-out infinite;
+  --animate-float-slower: float-slow 13s ease-in-out infinite;
+  --animate-drift: drift 16s ease-in-out infinite;
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.375rem;
 
-  /* Core palette — deep luxury navy */
-  --background: oklch(0.194 0.05 267.7); /* #0B132B */
-  --foreground: oklch(0.955 0.022 92.5); /* warm white #F5F0E0 */
-  --card: oklch(0.271 0.054 269.1); /* #1C2541 */
-  --card-foreground: oklch(0.955 0.022 92.5);
-  --popover: oklch(0.243 0.038 261.7);
-  --popover-foreground: oklch(0.955 0.022 92.5);
-  --secondary: oklch(0.243 0.038 261.7); /* #162032 */
-  --secondary-foreground: oklch(0.955 0.022 92.5);
-  --muted: oklch(0.243 0.038 261.7);
-  --muted-foreground: oklch(0.72 0.03 255); /* soft steel */
-  --accent: oklch(0.271 0.054 269.1);
-  --accent-foreground: oklch(0.955 0.022 92.5);
+  --background: oklch(0.176 0.045 267.7); /* deepened navy */
+  --foreground: oklch(0.962 0.014 92.5);
+  --card: oklch(0.229 0.043 266);
+  --card-foreground: oklch(0.962 0.014 92.5);
+  --popover: oklch(0.229 0.043 266);
+  --popover-foreground: oklch(0.962 0.014 92.5);
+  --secondary: oklch(0.229 0.043 266);
+  --secondary-foreground: oklch(0.962 0.014 92.5);
+  --muted: oklch(0.229 0.043 266);
+  --muted-foreground: oklch(0.735 0.024 258);
+  --accent: oklch(0.252 0.05 268);
+  --accent-foreground: oklch(0.962 0.014 92.5);
   --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.955 0.022 92.5);
-  --border: oklch(0.955 0.022 92.5 / 10%);
-  --input: oklch(0.955 0.022 92.5 / 14%);
-  --ring: oklch(0.767 0.139 91.1 / 60%);
+  --destructive-foreground: oklch(0.962 0.014 92.5);
+  --border: oklch(0.962 0.014 92.5 / 11%);
+  --input: oklch(0.962 0.014 92.5 / 16%);
+  --ring: oklch(0.79 0.13 90 / 70%);
 
-  /* Metallic gold */
-  --primary: oklch(0.767 0.139 91.1); /* #D4AF37 */
-  --primary-foreground: oklch(0.19 0.05 267.7);
+  --primary: oklch(0.79 0.13 90); /* metallic gold */
+  --primary-foreground: oklch(0.17 0.045 267.7);
 
-  /* Vanimaa brand tokens */
-  --navy: oklch(0.194 0.05 267.7);
-  --navy-deep: oklch(0.214 0.05 265.4); /* #0E1830 */
-  --surface: oklch(0.243 0.038 261.7); /* #162032 */
-  --surface-raised: oklch(0.271 0.054 269.1); /* #1C2541 */
-  --gold: oklch(0.767 0.139 91.1); /* #D4AF37 */
-  --gold-light: oklch(0.825 0.097 82.3); /* #E5C07B */
-  --gold-soft: oklch(0.767 0.139 91.1 / 14%);
-  --cream: oklch(0.955 0.022 92.5);
+  --navy: oklch(0.176 0.045 267.7);
+  --navy-deep: oklch(0.146 0.04 266);
+  --surface: oklch(0.207 0.038 264);
+  --surface-raised: oklch(0.229 0.043 266);
+  --gold: oklch(0.79 0.13 90);
+  --gold-light: oklch(0.862 0.086 84);
+  --gold-soft: oklch(0.79 0.13 90 / 12%);
+  --cream: oklch(0.962 0.014 92.5);
+  --hairline: oklch(0.962 0.014 92.5 / 12%);
 }
 
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
+@keyframes float-slow {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translate3d(0, -14px, 0);
   }
 }
 
-@keyframes shimmer {
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    transform: translate3d(10px, -12px, 0);
+  }
+  66% {
+    transform: translate3d(-8px, 8px, 0);
+  }
+}
+
+@keyframes draw-line {
   from {
-    background-position: 200% center;
+    transform: scaleY(0);
   }
   to {
-    background-position: -200% center;
+    transform: scaleY(1);
   }
 }
 
@@ -135,12 +136,15 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -149,53 +153,106 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 
   ::selection {
-    background-color: color-mix(in oklab, var(--gold) 80%, transparent);
+    background-color: color-mix(in oklab, var(--gold) 85%, transparent);
     color: var(--navy);
+  }
+
+  /* Visible, on-brand keyboard focus */
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
-  /* Metallic gold gradient text */
   .text-gold-gradient {
     background: linear-gradient(
       100deg,
       var(--gold-light) 0%,
-      var(--gold) 40%,
-      var(--gold-light) 70%,
-      var(--gold) 100%
+      var(--gold) 45%,
+      var(--gold-light) 100%
     );
-    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  .text-gold-shimmer {
-    animation: var(--animate-shimmer);
+  /* Eyebrow / kicker label */
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold-light);
   }
 
-  /* Thin gold hairline used as section dividers */
-  .gold-hairline {
+  .rule {
+    height: 1px;
     background: linear-gradient(
       90deg,
-      transparent,
-      color-mix(in oklab, var(--gold) 55%, transparent),
+      color-mix(in oklab, var(--gold) 45%, transparent),
       transparent
     );
   }
 
-  /* Frosted card surface */
-  .card-surface {
-    background: color-mix(in oklab, var(--surface-raised) 82%, transparent);
-    border: 1px solid color-mix(in oklab, var(--cream) 8%, transparent);
-    backdrop-filter: blur(12px);
+  .rule-center {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in oklab, var(--gold) 50%, transparent),
+      transparent
+    );
   }
 
-  .card-surface:hover {
-    border-color: color-mix(in oklab, var(--gold) 40%, transparent);
+  /* Flat editorial panel — hairline border, no glass */
+  .panel {
+    background-color: var(--surface);
+    border: 1px solid var(--hairline);
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.4s ease,
+      background-color 0.4s ease;
+  }
+
+  .panel:hover {
+    border-color: color-mix(in oklab, var(--gold) 45%, transparent);
+    background-color: var(--surface-raised);
+  }
+
+  /* Arrow nudge on hover for links and buttons */
+  .arrow-link .arrow {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .arrow-link:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  /* Fine grid texture for hero depth */
+  .grid-texture {
+    background-image:
+      linear-gradient(to right, var(--hairline) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--hairline) 1px, transparent 1px);
+    background-size: 76px 76px;
   }
 }
