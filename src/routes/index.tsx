@@ -16,7 +16,6 @@ import {
 import { BrandIcon } from "@/components/BrandIcon";
 import { Reveal } from "@/components/Reveal";
 import { BRAND_LINE, EMAIL, NAV_LINKS, PHONE_PRIMARY, PHONE_SECONDARY, WHATSAPP_LINK } from "@/lib/site-data";
-import { submitEnquiry } from "@/lib/submit-enquiry";
 import { cn } from "@/lib/utils";
 
 const inputClass =
@@ -621,18 +620,29 @@ function ContactSection() {
       setForm((current) => ({ ...current, [key]: event.target.value }));
     };
 
-  const onSubmit = async (event: React.FormEvent) => {
+  const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     setStatus("submitting");
-    try {
-      const result = await submitEnquiry({ data: form });
-      if (!result.ok) {
-        setStatus("error");
-        return;
-      }
+    const encodedMessage = encodeURIComponent(
+      [
+        "New enquiry for Vanimaa Co.",
+        "",
+        `Name: ${form.name}`,
+        `Brand / Company: ${form.company}`,
+        `Email: ${form.email}`,
+        "",
+        "Message:",
+        form.message,
+      ].join("\n"),
+    );
+    const whatsappUrl = `${WHATSAPP_LINK}?text=${encodedMessage}`;
+    const openedWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    if (openedWindow) {
       setForm({ name: "", company: "", email: "", message: "" });
       setStatus("success");
-    } catch {
+    } else {
+      window.location.href = whatsappUrl;
       setStatus("error");
     }
   };
@@ -732,8 +742,8 @@ function ContactSection() {
               >
                 {status === "submitting" ? "SENDING..." : "SEND ENQUIRY"} <Send className="size-4" />
               </button>
-              {status === "success" && <p className="mt-4 text-sm text-gold-light">Thank you. Your enquiry has been received. We&apos;ll get back to you soon.</p>}
-              {status === "error" && <p className="mt-4 text-sm text-red-300">Something went wrong while sending your enquiry. Please try again.</p>}
+              {status === "success" && <p className="mt-4 text-sm text-gold-light">WhatsApp opened with your enquiry ready to send.</p>}
+              {status === "error" && <p className="mt-4 text-sm text-red-300">WhatsApp could not be opened. Please try again or contact us directly.</p>}
             </form>
           </Reveal>
         </div>
