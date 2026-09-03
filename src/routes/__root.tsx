@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vanimaa Co. | Social Media Marketing Agency" },
+      { title: "Vanimaa Co. | Digital Content & Social Media" },
       {
         name: "description",
         content:
-          "Vanimaa Co. — Digitally Upscaling and Upgrading. Pro-level reels, technical account optimization and 100% genuine organic growth for your brand.",
+          "Vanimaa Co. creates professional digital content and handles social media from content planning and scripting through shoots, editing, creative design and strategy.",
       },
       { name: "author", content: "Vanimaa Co." },
-      { property: "og:title", content: "Vanimaa Co. | Digitally Upscaling and Upgrading" },
+      { property: "og:title", content: "Vanimaa Co. | Digital Content & Social Media" },
       {
         property: "og:description",
         content:
-          "A modern social media marketing agency delivering professional work, real results, and genuine organic growth.",
+          "Vanimaa Co. creates professional digital content and handles social media from content planning and scripting through shoots, editing, creative design and strategy.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
