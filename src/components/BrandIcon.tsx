@@ -18,8 +18,8 @@ export type BrandIconName =
   | "script";
 
 /**
- * Bespoke line illustrations drawn for Vanimaa Co. — outdoor media, activation,
- * production and digital. Stroke-based so they inherit the gold accent cleanly.
+ * Bespoke line illustrations drawn for Vanimaa Co. — content production and
+ * digital brand visuals. Stroke-based so they inherit the gold accent cleanly.
  */
 const PATHS: Record<BrandIconName, React.ReactNode> = {
   billboard: (

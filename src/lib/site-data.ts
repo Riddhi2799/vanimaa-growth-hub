@@ -22,159 +22,113 @@ export function whatsappWith(message: string) {
 }
 
 export const NAV_LINKS = [
-  { label: "About", href: "#about" },
+  { label: "Home", href: "#top" },
   { label: "Services", href: "#services" },
-  { label: "Approach", href: "#approach" },
+  { label: "Our Approach", href: "#approach" },
   { label: "Why Vanimaa", href: "#why" },
-  { label: "Contact", href: "#contact" },
+  { label: "Enquire", href: "#contact" },
 ] as const;
 
 export const CAPABILITIES = [
   {
     number: "01",
-    title: "Outdoor Media",
-    description: "Strategic visibility where your audience lives, travels and engages.",
-    icon: "billboard",
+    title: "Scripting",
+    description: "Well-structured, engaging scripts designed around your brand, audience and message.",
+    icon: "script",
   },
   {
     number: "02",
-    title: "Promotional Events",
-    description: "Brand experiences designed to create attention and engagement.",
-    icon: "event",
-  },
-  {
-    number: "03",
-    title: "On-Ground Promotions",
-    description: "Direct brand-to-audience interaction through meaningful activations.",
-    icon: "ground",
-  },
-  {
-    number: "04",
-    title: "Event Coverage",
-    description: "Professional visual coverage that captures the moments that matter.",
+    title: "Professional Shoot",
+    description: "Professional content shoots that capture products, people and ideas in a visually compelling way.",
     icon: "camera",
   },
   {
-    number: "05",
-    title: "Campaign Integration",
-    description: "Connecting multiple marketing touchpoints into one cohesive campaign.",
-    icon: "campaign",
+    number: "03",
+    title: "Editing",
+    description: "Polished, platform-ready video and visual edits that keep the brand consistent and engaging.",
+    icon: "video",
   },
   {
-    number: "06",
-    title: "Digital Marketing",
-    description: "Building a stronger, more strategic and engaging digital presence.",
+    number: "04",
+    title: "Social Media Strategy",
+    description: "Audience-focused strategies built around your goals, positioning and content.",
     icon: "digital",
   },
-] as const;
-
-export const JOURNEY = [
-  { label: "Outdoor", icon: "billboard" },
-  { label: "On-Ground", icon: "ground" },
-  { label: "Events", icon: "event" },
-  { label: "Content", icon: "camera" },
-  { label: "Digital", icon: "digital" },
-  { label: "Campaign", icon: "campaign" },
-  { label: "Brand", icon: "brand" },
+  {
+    number: "05",
+    title: "Posters & Creative Design",
+    description: "Professional posters and social creatives that strengthen your visual identity.",
+    icon: "design",
+  },
 ] as const;
 
 export const SERVICE_GROUPS = [
   {
     kicker: "Category 01",
-    title: "Offline / On-Ground",
-    blurb: "Real-world visibility built on five-plus years of field execution.",
+    title: "Digital Content & Social Media",
+    blurb: "End-to-end creative support designed to build a stronger digital presence.",
     services: [
       {
-        name: "Outdoor Media",
-        description: "Placement and visibility planning across high-traffic physical spaces.",
-        icon: "billboard",
+        name: "Scripting",
+        description: "Well-structured, engaging scripts designed around your brand, audience and message.",
+        icon: "script",
       },
       {
-        name: "Promotional Events",
-        description: "Concept, setup and execution of events that put your brand in the room.",
-        icon: "event",
-      },
-      {
-        name: "On-Ground Promotions",
-        description: "Face-to-face activations that create direct interaction with your audience.",
-        icon: "ground",
-      },
-      {
-        name: "Event Coverage",
-        description: "Photo and video coverage that turns live moments into lasting assets.",
+        name: "Professional Shoot",
+        description: "Professional shoots that capture your brand, products and ideas with intention.",
         icon: "camera",
       },
       {
-        name: "Campaign Integration",
-        description: "One narrative across every touchpoint, offline and online.",
-        icon: "campaign",
-      },
-    ],
-  },
-  {
-    kicker: "Category 02",
-    title: "Digital",
-    blurb: "Modern digital execution designed around visibility and engagement.",
-    services: [
-      {
-        name: "Social Media Marketing",
-        description: "Strategy, planning and account management built around your objective.",
-        icon: "digital",
-      },
-      {
-        name: "Reels & Video Production",
-        description: "Shooting, conceptualisation and retention-driven editing.",
+        name: "Editing",
+        description: "Clean, engaging edits that turn raw footage into polished social media content.",
         icon: "video",
       },
       {
-        name: "Graphic Design & Creative Content",
-        description: "Informative graphics, poster design and daily story creatives.",
+        name: "Social Media Strategy",
+        description: "Audience-focused strategies built around your goals, positioning and content.",
+        icon: "digital",
+      },
+      {
+        name: "Posters & Creative Design",
+        description: "Professional posters and social creatives that strengthen your visual identity.",
         icon: "design",
       },
       {
-        name: "Profile Enhancement",
-        description: "Bio restructuring, aesthetic curation and layout optimisation.",
+        name: "Social Media Handling",
+        description: "End-to-end management of your social presence, from planning and publishing to a consistent brand voice.",
         icon: "profile",
-      },
-      {
-        name: "Influencer Collaborations",
-        description: "Partnerships with aligned creators for genuine audience crossover.",
-        icon: "people",
       },
     ],
   },
 ] as const;
 
 export const APPROACH_STEPS = [
-  { number: "01", title: "Understand", description: "Understand the brand, audience and objective." },
-  { number: "02", title: "Strategize", description: "Build a clear direction around the goal." },
-  { number: "03", title: "Create", description: "Develop the creative, content or activation." },
-  { number: "04", title: "Execute", description: "Bring the campaign or idea to life." },
-  { number: "05", title: "Amplify", description: "Strengthen visibility across relevant channels." },
+  { number: "01", title: "Understand", description: "We understand your brand, audience, goals and positioning." },
+  { number: "02", title: "Plan", description: "We create a content and social media strategy tailored to your brand." },
+  { number: "03", title: "Create", description: "We script, shoot, edit and design content that represents your brand professionally." },
+  { number: "04", title: "Grow", description: "We create consistently and refine the approach around audience response." },
 ] as const;
 
 export const WHY_POINTS = [
   {
     number: "01",
-    title: "Real-World Experience",
-    description:
-      "5+ years of experience across outdoor media, promotional events and on-ground activations.",
+    title: "Creative & Reliable",
+    description: "Creative work backed by consistency and commitment.",
   },
   {
     number: "02",
-    title: "Digital-First Thinking",
-    description:
-      "Modern digital strategies designed around visibility, engagement and brand presence.",
+    title: "Audience Focused",
+    description: "Content created with the right audience in mind.",
   },
   {
     number: "03",
-    title: "Integrated Campaigns",
-    description: "Connecting offline experiences with digital communication.",
+    title: "Strategy Driven",
+    description: "Every creative decision has a purpose.",
   },
   {
     number: "04",
-    title: "Creative Execution",
-    description: "Turning ideas into experiences and content people remember.",
+    title: "Long-Term Partner",
+    description: "We aim to grow with the brands we work with.",
   },
 ] as const;
 
@@ -184,10 +138,10 @@ export const SOLUTION_TIERS = [
     tagline: "For brands establishing their foundation.",
     highlight: false,
     points: [
-      "Account audit and technical optimisation",
-      "Profile enhancement — bio, highlights and layout",
-      "Informative poster and creative design",
-      "Daily story visual assets",
+      "Content planning",
+      "Social media strategy",
+      "Posters and creative design",
+      "Consistent social media presence",
     ],
   },
   {
@@ -196,10 +150,10 @@ export const SOLUTION_TIERS = [
     highlight: true,
     points: [
       "Everything in Essential",
-      "Professional content shooting and filming",
-      "Reels and pro-level video editing",
-      "Strategic content calendar",
-      "Organic growth strategy and positioning",
+      "Scripting and professional shoots",
+      "Editing and creative production",
+      "Content planning for platforms",
+      "Audience-focused content",
     ],
   },
   {
@@ -208,24 +162,20 @@ export const SOLUTION_TIERS = [
     highlight: false,
     points: [
       "Everything in Growth",
-      "End-to-end account management",
-      "Multi-format creative production",
-      "Outdoor, on-ground and event integration",
-      "Influencer and creator collaborations",
-      "Priority support and performance reporting",
+      "End-to-end social media handling",
+      "Scripting, shoots and editing",
+      "Posters and creative design",
+      "Consistent social media presence",
     ],
   },
 ] as const;
 
 export const ENQUIRY_INTERESTS = [
-  "Digital Marketing",
-  "Outdoor Media",
-  "Promotional Events",
-  "On-Ground Promotions",
-  "Event Coverage",
-  "Campaign Integration",
-  "Reels / Video Production",
-  "Graphic Design",
-  "Influencer Collaborations",
+  "Social Media Strategy",
+  "Content Planning",
+  "Scripting",
+  "Professional Shoot",
+  "Editing",
+  "Posters & Creative Design",
   "Other",
 ] as const;

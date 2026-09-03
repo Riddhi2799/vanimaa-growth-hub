@@ -6,7 +6,7 @@ Create a premium, high-converting, single-page agency landing website for "Vanim
 - **Agency Name:** Vanimaa Co.
 - **Tagline:** Digitally Upscaling and Upgrading
 - **Core Philosophy:** Professional Work, Results, and Genuine Organic Growth.
-- **Color Theme:** Deep Luxury Navy Blue background (`#0B132B` / `#121B2A`), Metallic Gold accents (`#D4AF37` / `#E5C07B`), crisp white text, and subtle dark card surfaces (`#1C2541` / `#162032`).
+- **Color Theme:** Burgundy satin and black background with metallic gold accents, crisp off-white text, and subtle dark glass card surfaces.
 - **Typography:** Modern, elegant sans-serif typography with high readability and crisp contrast.
 - **Vibe:** Chic, professional, minimalist, responsive across mobile, tablet, and desktop.
 
